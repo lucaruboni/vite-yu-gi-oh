@@ -4,5 +4,19 @@ export const state = reactive({
     loading: true,
     cards: null,
     info: null,
-    API_URL: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0'
+    API_URL: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0',
+    fetchCards(url) {
+        axios.get(url)
+        .then(response => {
+            console.log(response);
+            this.cards = response.data.data
+            this.info = response.data.card_images
+            this.loading = false
+
+        })
+        .catch(err => {
+            console.log(err);
+            console.error(err.message)
+        })
+    }
 })
