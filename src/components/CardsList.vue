@@ -2,7 +2,7 @@
 import CardsItem from './CardsItem.vue';
 import {state} from '../state';
 export default{
-    name: 'CardsItem',
+    name: 'CardsList',
     components: {CardsItem},
     data(){
         return{
@@ -14,15 +14,15 @@ export default{
 
 <template>
 <div class="container">
-    <div class="row row-cols-1 row-cols-md3 row-cols-lg-4">
-        <characterItem :card="card" v-for="card in state.cards" v-if="!state.loading"></characterItem>
+    <div class="row row-cols-1 row-cols-md3 row-cols-lg-4" v-if="!state.loading">
+        <CardsItem class="col" :card="card" v-for="(card, index) in state.cards" :key="index"></CardsItem>
 
-        <div class="col-12" v-else>
-            <div class="loader">
-                ....LOADING YOUR CARDS
-            </div>
+        
+    </div>
+    <div class="row" v-else>
+        <div class="loader col-12">
+            ....LOADING YOUR CARDS
         </div>
-
     </div>
 </div>
 </template>

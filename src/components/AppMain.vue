@@ -1,9 +1,9 @@
 <script>
-import CardsItem from './CardsItem.vue';
+import CardsList from './CardsList.vue';
 import {state} from '../state.js'
 export default {
     name : 'AppMain',
-    components: {CardsItem},
+    components: {CardsList},
     data(){
         return{
             state
@@ -16,7 +16,7 @@ export default {
 <template>
 
 <main>
-    <CardsList :cards="cards"></CardsList>
+    <CardsList :cards="state.cards"></CardsList>
 </main>
 
 </template>

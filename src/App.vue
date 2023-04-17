@@ -15,7 +15,7 @@ export default{
     }
   },
   mounted(){
-    state.fetchCharacters(state.API_URL)
+    this.state.fetchCards(this.state.API_URL)
   }
 
 }
