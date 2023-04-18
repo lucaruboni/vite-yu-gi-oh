@@ -1,8 +1,14 @@
 <script>
+import { state } from '../state';
 export default{
-    name: CardCounter,
+    name: 'CardCounter',
     props:{
-        length: Number
+        length: Number,
+        data(){
+            return{
+                state
+            }
+        }
     }
 }
 </script>

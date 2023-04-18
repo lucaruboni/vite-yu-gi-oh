@@ -16,6 +16,7 @@ export default {
 <template>
 
 <main>
+    
     <CardsList :cards="state.cards"></CardsList>
 </main>
 
