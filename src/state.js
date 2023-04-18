@@ -11,8 +11,10 @@ export const state = reactive({
             console.log(response);
             this.cards = response.data.data
             
+            
             this.loading = false
             console.log(this.cards)
+            console.log(this.images)
         })
         .catch(err => {
             console.log(err);

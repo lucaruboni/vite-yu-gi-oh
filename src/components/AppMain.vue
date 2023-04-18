@@ -22,5 +22,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+    main{
+        background-color: #d58f39;
+    }
 </style>
