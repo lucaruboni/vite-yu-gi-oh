@@ -18,11 +18,11 @@ export default{
     },
     methods: {
         performSearch(){
-            console.log('ciao', this.state.archetype);
+            console.log('ciao', this.state.archetypes);
 
-            const url = this.state.API_URL + `?archetype=${this.state.archetype}`;
+            const url = this.state.API_URL + `?archetype=${this.state.archetypes}`;
             console.log(url)
-            this.state.fetchCards(url)
+            this.state.fetchArchetype(url)
         }
     }
 }

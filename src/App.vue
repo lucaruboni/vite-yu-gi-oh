@@ -15,7 +15,8 @@ export default{
     }
   },
   mounted(){
-    this.state.fetchCards(this.state.API_URL)
+    this.state.fetchCards(this.state.API_URL),
+    this.state.fetchArchetype(this.state.API_URL_ARCHETYPE)
   }
 
 }
