@@ -38,6 +38,7 @@ export default{
 
     .text{
         font-size: 0.8rem;
+        margin-bottom: 0.5rem;
         h3{
             font-size: 1rem;
         }
@@ -45,5 +46,9 @@ export default{
 
     img{
         width: 300px;
+
+        &:hover{
+            filter: drop-shadow(0 0 0.75rem crimson);
+        }
     }
 </style>
