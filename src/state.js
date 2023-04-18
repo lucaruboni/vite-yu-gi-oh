@@ -6,7 +6,7 @@ export const state = reactive({
     info: null,
     archetypesClicked: '',
     archetypes: null,
-    API_URL: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=350&offset=0',
+    API_URL: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=1000&offset=0',
     API_URL_ARCHETYPE:'https://db.ygoprodeck.com/api/v7/archetypes.php',
     //https://db.ygoprodeck.com/api/v7/cardinfo.php?num=350&offset=0&
     fetchCards(url) {
