@@ -14,7 +14,7 @@ export default{
         
         <div class="card d-flex text-center gap-2">
             <img :src="card.card_images[0].image_url" alt="" class="py-2  align-self-center img-fluid" >
-            <div class="text">
+            <div class="text py-2">
                 <h3>{{ card.name }}</h3>
                 <div class="archetype">{{ card.archetype}}</div>
         
@@ -29,6 +29,10 @@ export default{
         border: none;
         margin-bottom: 0.3rem;
         background-color: #000000c9;
+        color: white;
+        margin-left: 0.1rem;
+        margin-right: 0.1rem;
+
         
     }
 
@@ -40,6 +44,6 @@ export default{
     }
 
     img{
-        width: 250px;
+        width: 300px;
     }
 </style>

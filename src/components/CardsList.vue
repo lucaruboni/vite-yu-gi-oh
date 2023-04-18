@@ -16,13 +16,13 @@ export default{
             state
         }
     },
-    methods: {
+    computed: {
         performSearch(){
-            console.log('ciao', this.state.archetypes);
+            console.log('ciao', this.state.archetypesClicked);
 
-            const url = this.state.API_URL + `?archetype=${this.state.archetypes}`;
+            const url = this.state.API_URL + `&archetype=${this.state.archetypesClicked}`;
             console.log(url)
-            this.state.fetchArchetype(url)
+            this.state.fetchCards(url)
         }
     }
 }
@@ -31,10 +31,10 @@ export default{
 <template>
 <div class="container">
     
-   <SelectBox @makeSelect="performSearch()"></SelectBox>
+   <SelectBox @makeSelect="performSearch"></SelectBox>
     <CardCounter :length="state.cards.length" v-if="state.cards"></CardCounter>
     
-    <div class="row row-cols-1 row-cols-md3 row-cols-lg-4" v-if="!state.loading">
+    <div class="row row-cols-1 row-cols-md3 row-cols-lg-5" v-if="!state.loading">
         <CardsItem class="col" :card="card" v-for="(card, index) in state.cards"  :key="index"></CardsItem>
 
         
