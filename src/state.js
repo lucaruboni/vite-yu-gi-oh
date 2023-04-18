@@ -27,8 +27,8 @@ export const state = reactive({
         axios.get(url)
         .then(response => {
             console.log(response);
-            this.archetype = response.data
-            console.log(this.archetype)
+            this.archetypes = response.data
+            console.log(this.archetypes)
 
             
             
